@@ -67,34 +67,39 @@ const Portfolio = ({ project }) => {
 
 const IndexPage = () => {
   return (
-    <main className='flex bg-gradient-to-br from-orange-200 to-yellow-50 flex-col'>
-      {/* <StaticImage
+    <main className='flex bg-gradient-to-br from-orange-200 to-yellow-50 flex-col min-h-screen'>
+      <StaticImage
         src='../images/header.jpeg'
         alt='A man standing in front of Yosemite Valley'
         height='400'
-        layout='constrained'
-      /> */}
+      />
       <div id='mainstuff' className='flex mx-auto container flex-col flex-grow'>
-        <h1 className='text-8xl text-center'>
-          Hi there, I'm Daniel Gale-Rosen
-        </h1>
-        <p>
-          I'm a full-stack developer with deep (and now somewhat useless)
-          marketing experience. I've been coding on the side for years,
-          primarily in JavaScript and Python, and I'm ready to move into the
-          professional software development world.
-        </p>
-        <p>
-          I've always had a passion for creating, whether that means designing
-          an escape room, learning how to code or engineer something new, or
-          perfecting the Old Fashioned. I have a passion for games, immersive
-          experiences, and finding other ways to break people out of their usual
-          routine.
-        </p>
-        <p>
-          If you'd like to talk about something you're working on or what we
-          could make together, let's chat.
-        </p>
+        <p className='text-4xl my-8'>Hi there, I'm Daniel Gale-Rosen.</p>
+        <div className='flex flex-col'>
+          <div className='flex mb-3'>
+            <p className='basis-1/2'>
+              I'm a full-stack developer with deep (and now somewhat useless)
+              marketing experience. I've been coding on the side for years,
+              primarily in JavaScript and Python, and I'm ready to move into the
+              professional software development world.
+            </p>
+          </div>
+          <div className='flex mb-3'>
+            <p className='basis-1/2'>
+              I've always had a passion for creating, whether that means
+              designing an escape room, learning how to code or engineer
+              something new, or perfecting the Old Fashioned. I have a passion
+              for games, immersive experiences, and finding other ways to break
+              people out of their usual routine.
+            </p>
+          </div>
+          <div className='flex mb-3'>
+            <p className='basis-1/2'>
+              If you'd like to talk about something you're working on or what we
+              could make together, let's chat.
+            </p>
+          </div>
+        </div>
         <a className='underline' href={resume} download>
           Resume
         </a>
@@ -122,7 +127,12 @@ const IndexPage = () => {
           </ul>
         </div> */}
         <div className='flex flex-col flex-grow'>
-          <h2 className='font-bold text-lg'>Links</h2>
+          <h2 className='font-bold text-lg'>Contact and Links</h2>
+          <ul className='list-disc list-inside'>
+            <li>
+              <a href='mailto:dangalerosen@gmail.com'>Email</a>
+            </li>
+          </ul>
           <ul className='list-disc list-inside'>
             <li>
               <a href='https://github.com/dangrous/'>GitHub</a>

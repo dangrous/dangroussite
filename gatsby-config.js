@@ -49,5 +49,12 @@ module.exports = {
         crossOrigin: `use-credentials`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Bebas Neue`],
+        display: 'swap',
+      },
+    },
   ],
 }

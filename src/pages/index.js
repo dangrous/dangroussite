@@ -58,7 +58,7 @@ const PortfolioProject = ({ project }) => {
         <a className='underline' href={project.link}>
           Check it Out
         </a>
-        <a className='underline' href={project.code}>
+        <a className='underline font-test' href={project.code}>
           See the Code
         </a>
       </div>
@@ -68,17 +68,28 @@ const PortfolioProject = ({ project }) => {
 
 const IndexPage = () => {
   return (
-    <main className='flex bg-gradient-to-br from-orange-200 to-yellow-50 flex-col min-h-screen'>
+    <main className='flex bg-gradient-to-br from-slate-300 to-slate-50 flex-col min-h-screen border border-slate-500 border-8 '>
       {/* <StaticImage
         src='../images/header.jpeg'
         alt='A man standing in front of Yosemite Valley'
         height='400'
       /> */}
-      <div id='mainstuff' className='flex container flex-col flex-grow mx-3'>
-        <p className='text-4xl mt-2 mb-8 mr-8'>
-          Hi there, I'm Daniel Gale-Rosen.
-        </p>
-        <div className='flex flex-col mr-8'>
+      <div
+        id='mainstuff'
+        className='flex container flex-col flex-grow mx-3 mt-3 lg:mt-0'
+      >
+        <div className='flex flex-wrap lg:flex-nowrap items-center mb-8 mr-4'>
+          <StaticImage
+            src='../images/icon.jpg'
+            alt=''
+            className='md:w-20 md:h-20 mr-2'
+          />
+          <p className='text-8xl font-header text-slate-500 pt-3'>
+            Hi there, I'm Daniel Gale-Rosen.
+          </p>
+        </div>
+
+        <div className='flex flex-col pt-2 mr-8'>
           <div className='flex mb-3'>
             <p className='lg:basis-1/2'>
               I'm a full-stack developer with deep (and now somewhat useless)
@@ -134,7 +145,7 @@ const IndexPage = () => {
           </li>
         </ul>
       </div>
-      <footer className='flex p-5 bg-amber-100 mt-6 justify-between'>
+      <footer className='flex p-5 bg-slate-500 mt-6 text-white justify-between'>
         <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>
           <h2 className='font-bold text-lg'>Contact and Links</h2>
           <ul className='list-inside flex justify-between flex-grow-0'>

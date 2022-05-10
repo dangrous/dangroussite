@@ -29,7 +29,7 @@ const projects = [
   },
 ]
 
-const Portfolio = ({ project }) => {
+const PortfolioProject = ({ project }) => {
   // These should be in 1408x920 format
   const thumbnails = [
     <StaticImage
@@ -109,7 +109,7 @@ const IndexPage = () => {
         <h2 className='text-2xl my-3'>Portfolio</h2>
         <div className='flex flex-wrap mr-6'>
           {projects.map((project) => {
-            return <Portfolio project={project} />
+            return <PortfolioProject project={project} />
           })}
         </div>
         <h2 className='text-2xl my-3'>Other Endeavors</h2>
@@ -125,7 +125,7 @@ const IndexPage = () => {
           </li>
         </ul>
       </div>
-      <footer className='flex p-5 bg-amber-100 mt-2 justify-between'>
+      <footer className='flex p-5 bg-amber-100 mt-6 justify-between'>
         <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>
           <h2 className='font-bold text-lg'>Contact and Links</h2>
           <ul className='list-inside flex justify-between flex-grow-0'>

@@ -30,28 +30,29 @@ const projects = [
 ]
 
 const Portfolio = ({ project }) => {
+  // These should be in 1408x920 format
   const thumbnails = [
     <StaticImage
       src='../images/popmarket.jpg'
       alt='Pop Market'
-      className='m-1'
+      className='m-1 rounded'
     />,
     <StaticImage
       src='../images/quicktionary.jpg'
       alt='Quicktionary'
-      className='m-1'
+      className='m-1 rounded'
     />,
     <StaticImage
       src='../images/nailspiration.jpg'
       alt='Nailspiration'
-      className='m-1'
+      className='m-1 rounded'
     />,
   ]
 
   return (
     <div className='flex text-center flex-col bg-white rounded p-3 m-1 lg:basis-96'>
-      <h3 className='text-lg'>{project.title}</h3>
       {thumbnails[project.thumbnail]}
+      <h3 className='text-lg'>{project.title}</h3>
       <p className='m-2 flex-grow'>{project.description}</p>
       <div className='flex justify-between'>
         <a className='underline' href={project.link}>
@@ -68,16 +69,18 @@ const Portfolio = ({ project }) => {
 const IndexPage = () => {
   return (
     <main className='flex bg-gradient-to-br from-orange-200 to-yellow-50 flex-col min-h-screen'>
-      <StaticImage
+      {/* <StaticImage
         src='../images/header.jpeg'
         alt='A man standing in front of Yosemite Valley'
         height='400'
-      />
-      <div id='mainstuff' className='flex mx-auto container flex-col flex-grow'>
-        <p className='text-4xl my-8'>Hi there, I'm Daniel Gale-Rosen.</p>
-        <div className='flex flex-col'>
+      /> */}
+      <div id='mainstuff' className='flex container flex-col flex-grow mx-3'>
+        <p className='text-4xl mt-2 mb-8 mr-8'>
+          Hi there, I'm Daniel Gale-Rosen.
+        </p>
+        <div className='flex flex-col mr-8'>
           <div className='flex mb-3'>
-            <p className='basis-1/2'>
+            <p className='lg:basis-1/2'>
               I'm a full-stack developer with deep (and now somewhat useless)
               marketing experience. I've been coding on the side for years,
               primarily in JavaScript and Python, and I'm ready to move into the
@@ -85,7 +88,7 @@ const IndexPage = () => {
             </p>
           </div>
           <div className='flex mb-3'>
-            <p className='basis-1/2'>
+            <p className='lg:basis-1/2'>
               I've always had a passion for creating, whether that means
               designing an escape room, learning how to code or engineer
               something new, or perfecting the Old Fashioned. I have a passion
@@ -94,7 +97,7 @@ const IndexPage = () => {
             </p>
           </div>
           <div className='flex mb-3'>
-            <p className='basis-1/2'>
+            <p className='lg:basis-1/2'>
               If you'd like to talk about something you're working on or what we
               could make together, let's chat.
             </p>
@@ -103,14 +106,14 @@ const IndexPage = () => {
         <a className='underline' href={resume} download>
           Resume
         </a>
-        <h2 className='text-2xl'>Portfolio</h2>
-        <div className='flex flex-wrap'>
+        <h2 className='text-2xl my-3'>Portfolio</h2>
+        <div className='flex flex-wrap mr-6'>
           {projects.map((project) => {
             return <Portfolio project={project} />
           })}
         </div>
       </div>
-      <footer className='flex p-5 bg-white'>
+      <footer className='flex p-5 bg-amber-100 mt-2 justify-between'>
         {/* <div className='flex flex-col flex-grow'>
           <a href='/'>Home</a>
           <h2 className='font-bold text-lg'>Other Endeavors</h2>
@@ -126,23 +129,16 @@ const IndexPage = () => {
             </li>
           </ul>
         </div> */}
-        <div className='flex flex-col flex-grow'>
+        <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>
           <h2 className='font-bold text-lg'>Contact and Links</h2>
-          <ul className='list-disc list-inside'>
-            <li>
-              <a href='mailto:dangalerosen@gmail.com'>Email</a>
-            </li>
-          </ul>
-          <ul className='list-disc list-inside'>
-            <li>
-              <a href='https://github.com/dangrous/'>GitHub</a>
-            </li>
-            <li>
-              <a href='https://www.linkedin.com/in/dgalerosen/'>LinkedIn</a>
-            </li>
-            <li>
-              <a href='https://www.instagram.com/dangrous/'>Instagram</a>
-            </li>
+          <ul className='list-inside flex justify-between flex-grow-0'>
+            <a href='mailto:dangalerosen@gmail.com'>Email</a>
+            <span>/</span>
+            <a href='https://github.com/dangrous/'>GitHub</a>
+            <span>/</span>
+            <a href='https://www.linkedin.com/in/dgalerosen/'>LinkedIn</a>
+            <span>/</span>
+            <a href='https://www.instagram.com/dangrous/'>Instagram</a>
           </ul>
         </div>
         <p className='self-end'>

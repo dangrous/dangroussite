@@ -4,6 +4,14 @@ import resume from '../files/DGRresume.pdf'
 
 const projects = [
   {
+    thumbnail: 2,
+    title: 'Nailspiration',
+    description:
+      'This is a simple tool for providing inspiration for creating new nail art. Although it was created specifically for one person, it can be used by anyone! The application uses the Unsplash and Smithsonian APIs, as well as web scraping to get fun images.',
+    link: 'http://www.ishmanail.xyz/',
+    code: 'https://github.com/dangrous/nailspiration',
+  },
+  {
     thumbnail: 0,
     title: 'Pop Market',
     description:
@@ -19,14 +27,6 @@ const projects = [
     link: 'http://dangrous.pythonanywhere.com/',
     code: 'https://github.com/dangrous/quicktionary',
   },
-  {
-    thumbnail: 2,
-    title: 'Nailspiration',
-    description:
-      'This is a simple tool for providing inspiration for creating new nail art. Although it was created specifically for one person, it can be used by anyone! The application uses the Unsplash and Smithsonian APIs, as well as web scraping to get fun images.',
-    link: 'http://www.ishmanail.xyz/',
-    code: 'https://github.com/dangrous/nailspiration',
-  },
 ]
 
 const Portfolio = ({ project }) => {
@@ -35,17 +35,17 @@ const Portfolio = ({ project }) => {
     <StaticImage
       src='../images/popmarket.jpg'
       alt='Pop Market'
-      className='m-1 rounded'
+      className='m-1 rounded border'
     />,
     <StaticImage
       src='../images/quicktionary.jpg'
       alt='Quicktionary'
-      className='m-1 rounded'
+      className='m-1 rounded border'
     />,
     <StaticImage
       src='../images/nailspiration.jpg'
       alt='Nailspiration'
-      className='m-1 rounded'
+      className='m-1 rounded border'
     />,
   ]
 

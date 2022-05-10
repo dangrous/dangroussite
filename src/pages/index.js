@@ -115,13 +115,22 @@ const IndexPage = () => {
         <h2 className='text-2xl my-3'>Other Endeavors</h2>
         <ul className='list-disc list-inside'>
           <li>
-            <a href='https://www.blackwoodcharter.org'>Escape Rooms</a>
+            <a href='https://www.blackwoodcharter.org' className='underline'>
+              Escape Rooms
+            </a>
           </li>
           <li>
-            <a href='https://52frames.com/photographer/13983'>Photography</a>
+            <a
+              href='https://52frames.com/photographer/13983'
+              className='underline'
+            >
+              Photography
+            </a>
           </li>
           <li>
-            <a href='https://www.boozynewsie.com'>Cocktails</a>
+            <a href='https://www.boozynewsie.com' className='underline'>
+              Cocktails
+            </a>
           </li>
         </ul>
       </div>
@@ -129,13 +138,24 @@ const IndexPage = () => {
         <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>
           <h2 className='font-bold text-lg'>Contact and Links</h2>
           <ul className='list-inside flex justify-between flex-grow-0'>
-            <a href='mailto:dangalerosen@gmail.com'>Email</a>
+            <a href='mailto:dangalerosen@gmail.com' className='underline'>
+              Email
+            </a>
             <span>/</span>
-            <a href='https://github.com/dangrous/'>GitHub</a>
+            <a href='https://github.com/dangrous/' className='underline'>
+              GitHub
+            </a>
             <span>/</span>
-            <a href='https://www.linkedin.com/in/dgalerosen/'>LinkedIn</a>
+            <a
+              href='https://www.linkedin.com/in/dgalerosen/'
+              className='underline'
+            >
+              LinkedIn
+            </a>
             <span>/</span>
-            <a href='https://www.instagram.com/dangrous/'>Instagram</a>
+            <a href='https://www.instagram.com/dangrous/' className='underline'>
+              Instagram
+            </a>
           </ul>
         </div>
         <p className='self-end'>

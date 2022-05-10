@@ -112,23 +112,20 @@ const IndexPage = () => {
             return <Portfolio project={project} />
           })}
         </div>
+        <h2 className='text-2xl my-3'>Other Endeavors</h2>
+        <ul className='list-disc list-inside'>
+          <li>
+            <a href='https://www.blackwoodcharter.org'>Escape Rooms</a>
+          </li>
+          <li>
+            <a href='https://52frames.com/photographer/13983'>Photography</a>
+          </li>
+          <li>
+            <a href='https://www.boozynewsie.com'>Cocktails</a>
+          </li>
+        </ul>
       </div>
       <footer className='flex p-5 bg-amber-100 mt-2 justify-between'>
-        {/* <div className='flex flex-col flex-grow'>
-          <a href='/'>Home</a>
-          <h2 className='font-bold text-lg'>Other Endeavors</h2>
-          <ul className='list-disc list-inside'>
-            <li>
-              <a href='/escapes'>Escape Rooms</a>
-            </li>
-            <li>
-              <a href='/photos'>Photography</a>
-            </li>
-            <li>
-              <a href='/cocktails'>Cocktails</a>
-            </li>
-          </ul>
-        </div> */}
         <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>
           <h2 className='font-bold text-lg'>Contact and Links</h2>
           <ul className='list-inside flex justify-between flex-grow-0'>

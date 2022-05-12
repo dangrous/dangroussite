@@ -78,6 +78,10 @@ const IndexPage = () => {
     <>
       <Helmet>
         <title>DANGRO.US</title>
+        <meta
+          name='description'
+          content="Hi there, I'm Daniel Gale-Rosen. I'm a full-stack developer."
+        />
       </Helmet>
       <main className='flex bg-gradient-to-br from-slate-300 to-slate-50 flex-col min-h-screen border border-slate-500 border-8'>
         {/* <StaticImage

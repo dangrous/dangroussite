@@ -53,7 +53,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Bebas Neue`],
+        fonts: [
+          `Bebas Neue`,
+          `Barlow`,
+          `Inter`,
+          `Anton`,
+          `Lora`,
+          `Roboto Mono`,
+          `Karla`,
+        ],
         display: 'swap',
       },
     },

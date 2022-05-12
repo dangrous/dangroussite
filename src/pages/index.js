@@ -36,30 +36,36 @@ const PortfolioProject = ({ project }) => {
     <StaticImage
       src='../images/popmarket.jpg'
       alt='Pop Market'
-      className='m-1 rounded border'
+      className='m-1 border'
     />,
     <StaticImage
       src='../images/quicktionary.jpg'
       alt='Quicktionary'
-      className='m-1 rounded border'
+      className='m-1 border'
     />,
     <StaticImage
       src='../images/nailspiration.jpg'
       alt='Nailspiration'
-      className='m-1 rounded border'
+      className='m-1 border'
     />,
   ]
 
   return (
-    <div className='flex text-center flex-col bg-white rounded p-3 m-1 lg:basis-96'>
+    <div className='flex text-center flex-col bg-white p-3 m-1 lg:basis-96'>
+      <h3 className='text-lg font-header mb-2'>{project.title}</h3>
       {thumbnails[project.thumbnail]}
-      <h3 className='text-lg'>{project.title}</h3>
       <p className='m-2 flex-grow'>{project.description}</p>
-      <div className='flex justify-between'>
-        <a className='underline' href={project.link}>
+      <div className='flex justify-between mt-8'>
+        <a
+          className='text-slate-500 hover:underline hover:text-black'
+          href={project.link}
+        >
           Check it Out
         </a>
-        <a className='underline font-test' href={project.code}>
+        <a
+          className='text-slate-500 hover:underline hover:text-black'
+          href={project.code}
+        >
           See the Code
         </a>
       </div>
@@ -73,7 +79,7 @@ const IndexPage = () => {
       <Helmet>
         <title>DANGRO.US</title>
       </Helmet>
-      <main className='flex bg-gradient-to-br from-slate-300 to-slate-50 flex-col min-h-screen border border-slate-500 border-8 '>
+      <main className='flex bg-gradient-to-br from-slate-300 to-slate-50 flex-col min-h-screen border border-slate-500 border-8'>
         {/* <StaticImage
         src='../images/header.jpeg'
         alt='A man standing in front of Yosemite Valley'
@@ -81,20 +87,20 @@ const IndexPage = () => {
       /> */}
         <div
           id='mainstuff'
-          className='flex container flex-col flex-grow mx-3 mt-3 lg:mt-0'
+          className='flex container flex-col flex-grow mx-3 mt-3 md:mt-0 font-body'
         >
-          <div className='flex flex-wrap lg:flex-nowrap items-center mb-8 mr-4'>
+          <div className='flex flex-wrap 2xl:flex-nowrap items-center mb-8 mr-4 2xl:mt-24'>
             <StaticImage
               src='../images/icon.jpg'
               alt=''
-              className='md:w-20 md:h-20 mr-2'
+              className='md:mt-2 md:w-20 mr-2'
             />
-            <p className='text-8xl font-header text-slate-500 pt-3'>
+            <p className='text-8xl uppercase font-header text-slate-500 pt-3'>
               Hi there, I'm Daniel Gale-Rosen.
             </p>
           </div>
 
-          <div className='flex flex-col pt-2 mr-8'>
+          <div className='flex flex-col pt-2 mr-8 my-10'>
             <div className='flex mb-3'>
               <p className='lg:basis-1/2'>
                 I'm a full-stack developer with deep (and now somewhat useless)
@@ -115,69 +121,100 @@ const IndexPage = () => {
             <div className='flex mb-3'>
               <p className='lg:basis-1/2'>
                 If you'd like to talk about something you're working on or what
-                we could make together, let's chat.
+                we could make together,{' '}
+                <a
+                  className='text-slate-500 hover:underline hover:text-black'
+                  href='mailto:dangalerosen@gmail.com'
+                >
+                  let's chat
+                </a>
+                .
               </p>
             </div>
           </div>
-          <a className='underline' href={resume} download>
-            Resume
-          </a>
-          <h2 className='text-2xl my-3'>Portfolio</h2>
-          <div className='flex flex-wrap mr-6'>
+          <h2 className='text-2xl mt-3 font-header text-slate-500 mb-10'>
+            Portfolio
+          </h2>
+          <div className='flex flex-wrap mr-6 mb-10'>
             {projects.map((project) => {
               return <PortfolioProject project={project} />
             })}
           </div>
-          <h2 className='text-2xl my-3'>Other Endeavors</h2>
+          <h2 className='text-2xl mt-3 mb-10 font-header text-slate-500'>
+            Other Endeavors
+          </h2>
           <ul className='list-disc list-inside'>
             <li>
-              <a href='https://www.blackwoodcharter.org' className='underline'>
+              <a
+                href='https://www.blackwoodcharter.org'
+                className='text-slate-500 hover:underline hover:text-black'
+              >
                 Escape Rooms
               </a>
             </li>
             <li>
               <a
                 href='https://52frames.com/photographer/13983'
-                className='underline'
+                className='text-slate-500 hover:underline hover:text-black'
               >
                 Photography
               </a>
             </li>
             <li>
-              <a href='https://www.boozynewsie.com' className='underline'>
+              <a
+                href='https://www.boozynewsie.com'
+                className='text-slate-500 hover:underline hover:text-black'
+              >
                 Cocktails
               </a>
             </li>
           </ul>
         </div>
-        <footer className='flex p-5 bg-slate-500 mt-6 text-white justify-between'>
+        <footer
+          className='flex p-5 bg-slate-500 mt-6 text-white justify-between font-body sm:flex-nowrap
+        flex-wrap'
+        >
           <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>
-            <h2 className='font-bold text-lg'>Contact and Links</h2>
+            <h2 className='font-bold text-lg font-header'>Contact and Links</h2>
             <ul className='list-inside flex justify-between flex-grow-0'>
-              <a href='mailto:dangalerosen@gmail.com' className='underline'>
+              <a
+                className='hover:underline hover:text-black'
+                href={resume}
+                download
+              >
+                Resume
+              </a>
+              <span>/</span>
+              <a
+                href='mailto:dangalerosen@gmail.com'
+                className='hover:underline hover:text-black'
+              >
                 Email
               </a>
               <span>/</span>
-              <a href='https://github.com/dangrous/' className='underline'>
+              <a
+                href='https://github.com/dangrous/'
+                className='hover:underline hover:text-black'
+              >
                 GitHub
               </a>
               <span>/</span>
               <a
                 href='https://www.linkedin.com/in/dgalerosen/'
-                className='underline'
+                className='hover:underline hover:text-black'
               >
                 LinkedIn
               </a>
               <span>/</span>
               <a
                 href='https://www.instagram.com/dangrous/'
-                className='underline'
+                className='hover:underline hover:text-black'
               >
                 Instagram
               </a>
             </ul>
           </div>
-          <p className='self-end'>
+          <p className='self-end mt-5 sm:mt-0'>
             This website is created with Gatsby.js and styled with Tailwind.css
           </p>
         </footer>

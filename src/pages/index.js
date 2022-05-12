@@ -52,18 +52,20 @@ const PortfolioProject = ({ project }) => {
 
   return (
     <div className='flex text-center flex-col bg-white p-3 m-1 lg:basis-96'>
-      <h3 className='text-lg font-header mb-2'>{project.title}</h3>
-      {thumbnails[project.thumbnail]}
+      <h3 className='text-lg font-header mb-2 tracking-wide'>
+        {project.title}
+      </h3>
+      <a href={project.link}>{thumbnails[project.thumbnail]}</a>
       <p className='m-2 flex-grow'>{project.description}</p>
       <div className='flex justify-between mt-8'>
         <a
-          className='text-slate-500 hover:underline hover:text-black'
+          className='text-slate-600 hover:underline hover:text-black'
           href={project.link}
         >
           Check it Out
         </a>
         <a
-          className='text-slate-500 hover:underline hover:text-black'
+          className='text-slate-600 hover:underline hover:text-black'
           href={project.code}
         >
           See the Code
@@ -83,7 +85,7 @@ const IndexPage = () => {
           content="Hi there, I'm Daniel Gale-Rosen. I'm a full-stack developer."
         />
       </Helmet>
-      <main className='flex bg-gradient-to-br from-slate-300 to-slate-50 flex-col min-h-screen border border-slate-500 border-8'>
+      <main className='flex bg-gradient-to-br from-slate-300 to-white flex-col min-h-screen border border-slate-500 border-8'>
         {/* <StaticImage
         src='../images/header.jpeg'
         alt='A man standing in front of Yosemite Valley'
@@ -127,7 +129,7 @@ const IndexPage = () => {
                 If you'd like to talk about something you're working on or what
                 we could make together,{' '}
                 <a
-                  className='text-slate-500 hover:underline hover:text-black'
+                  className='text-slate-600 hover:underline hover:text-black'
                   href='mailto:dangalerosen@gmail.com'
                 >
                   let's chat
@@ -136,22 +138,22 @@ const IndexPage = () => {
               </p>
             </div>
           </div>
-          <h2 className='text-2xl mt-3 font-header text-slate-500 mb-10'>
+          <h2 className='text-2xl mt-3 font-header text-slate-500 mb-10 tracking-wide'>
             Portfolio
           </h2>
           <div className='flex flex-wrap mr-6 mb-10'>
             {projects.map((project) => {
-              return <PortfolioProject project={project} />
+              return <PortfolioProject project={project} key={project.title} />
             })}
           </div>
-          <h2 className='text-2xl mt-3 mb-10 font-header text-slate-500'>
+          <h2 className='text-2xl mt-3 mb-10 font-header text-slate-500 tracking-wide'>
             Other Endeavors
           </h2>
           <ul className='list-disc list-inside'>
             <li>
               <a
                 href='https://www.blackwoodcharter.org'
-                className='text-slate-500 hover:underline hover:text-black'
+                className='text-slate-600 hover:underline hover:text-black'
               >
                 Escape Rooms
               </a>
@@ -159,7 +161,7 @@ const IndexPage = () => {
             <li>
               <a
                 href='https://52frames.com/photographer/13983'
-                className='text-slate-500 hover:underline hover:text-black'
+                className='text-slate-600 hover:underline hover:text-black'
               >
                 Photography
               </a>
@@ -167,7 +169,7 @@ const IndexPage = () => {
             <li>
               <a
                 href='https://www.boozynewsie.com'
-                className='text-slate-500 hover:underline hover:text-black'
+                className='text-slate-600 hover:underline hover:text-black'
               >
                 Cocktails
               </a>
@@ -179,7 +181,9 @@ const IndexPage = () => {
         flex-wrap'
         >
           <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>
-            <h2 className='font-bold text-lg font-header'>Contact and Links</h2>
+            <h2 className='font-bold text-lg font-header tracking-wider'>
+              Contact and Links
+            </h2>
             <ul className='list-inside flex justify-between flex-grow-0'>
               <a
                 className='hover:underline hover:text-black'

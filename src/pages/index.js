@@ -85,7 +85,7 @@ const IndexPage = () => {
           content="Hi there, I'm Daniel Gale-Rosen. I'm a full-stack developer."
         />
       </Helmet>
-      <main className='flex bg-gradient-to-br from-slate-300 to-white flex-col max-h-[100vh] overflow-hidden border border-slate-500 border-8'>
+      <main className='flex bg-gradient-to-br from-slate-300 to-white flex-col max-h-screen overflow-hidden border border-slate-500 border-8'>
         {/* <StaticImage
         src='../images/header.jpeg'
         alt='A man standing in front of Yosemite Valley'

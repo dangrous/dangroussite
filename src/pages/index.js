@@ -85,7 +85,7 @@ const IndexPage = () => {
           content="Hi there, I'm Daniel Gale-Rosen. I'm a full-stack developer."
         />
       </Helmet>
-      <main className='flex bg-gradient-to-br from-slate-300 to-white flex-col max-h-[64rem] overflow-hidden border border-slate-500 border-8'>
+      <main className='flex bg-gradient-to-br from-slate-300 to-white flex-col max-h-[100vh] overflow-hidden border border-slate-500 border-8'>
         {/* <StaticImage
         src='../images/header.jpeg'
         alt='A man standing in front of Yosemite Valley'
@@ -149,7 +149,7 @@ const IndexPage = () => {
           <h2 className='text-2xl mt-3 mb-10 font-header text-slate-500 tracking-wide'>
             Other Endeavors
           </h2>
-          <ul className='list-disc list-inside'>
+          <ul className='list-disc list-inside mb-6'>
             <li>
               <a
                 href='https://www.blackwoodcharter.org'
@@ -177,7 +177,7 @@ const IndexPage = () => {
           </ul>
         </div>
         <footer
-          className='flex p-5 bg-slate-500 mt-6 text-white justify-between font-body sm:flex-nowrap
+          className='flex p-5 bg-slate-500 text-white justify-between font-body sm:flex-nowrap
         flex-wrap'
         >
           <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>

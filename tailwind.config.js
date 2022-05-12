@@ -5,7 +5,6 @@ module.exports = {
       header: ['anton'],
       body: ['karla'],
     },
-    extend: {},
   },
   plugins: [],
 }

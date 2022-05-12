@@ -85,7 +85,7 @@ const IndexPage = () => {
           content="Hi there, I'm Daniel Gale-Rosen. I'm a full-stack developer."
         />
       </Helmet>
-      <main className='flex bg-gradient-to-br from-slate-300 to-white flex-col min-h-screen border border-slate-500 border-8'>
+      <main className='flex bg-gradient-to-br from-slate-300 to-white flex-col max-h-[64rem] border border-slate-500 border-8'>
         {/* <StaticImage
         src='../images/header.jpeg'
         alt='A man standing in front of Yosemite Valley'
@@ -93,7 +93,7 @@ const IndexPage = () => {
       /> */}
         <div
           id='mainstuff'
-          className='flex container flex-col flex-grow mx-3 mt-3 md:mt-0 font-body'
+          className='overflow-y-auto flex container flex-col flex-grow max-w-full mx-3 mt-3 md:mt-0 font-body'
         >
           <div className='flex flex-wrap 2xl:flex-nowrap items-center mb-8 mr-4 2xl:mt-24'>
             <StaticImage

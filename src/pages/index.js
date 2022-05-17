@@ -17,7 +17,7 @@ const projects = [
     title: 'Pop Market',
     description:
       'Pop Market is an interface for betting on the success of songs in the Global Top 50 playlist on Spotify. Chase the top ten users on the leaderboard and become a points millionaire!',
-    link: 'floating-earth-98213.herokuapp.com/',
+    link: 'https://floating-earth-98213.herokuapp.com/',
     code: 'https://github.com/dangrous/pop_market',
   },
   {

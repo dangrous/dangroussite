@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
-import { Helmet } from 'react-helmet'
-import resume from '../files/DGRresume.pdf'
+import * as React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
+import { Helmet } from 'react-helmet';
+import resume from '../files/DGRresume.pdf';
 
 const projects = [
   {
@@ -17,7 +17,7 @@ const projects = [
     title: 'Pop Market',
     description:
       'Pop Market is an interface for betting on the success of songs in the Global Top 50 playlist on Spotify. Chase the top ten users on the leaderboard and become a points millionaire!',
-    link: 'https://floating-earth-98213.herokuapp.com/',
+    link: 'https://pop-market.herokuapp.com/',
     code: 'https://github.com/dangrous/pop_market',
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     link: 'http://dangrous.pythonanywhere.com/',
     code: 'https://github.com/dangrous/quicktionary',
   },
-]
+];
 
 const PortfolioProject = ({ project }) => {
   // These should be in 1408x920 format
@@ -48,7 +48,7 @@ const PortfolioProject = ({ project }) => {
       alt='Nailspiration'
       className='m-1 border'
     />,
-  ]
+  ];
 
   return (
     <div className='flex text-center flex-col bg-white p-3 m-1 lg:basis-96'>
@@ -72,8 +72,8 @@ const PortfolioProject = ({ project }) => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const IndexPage = () => {
   return (
@@ -143,7 +143,7 @@ const IndexPage = () => {
           </h2>
           <div className='flex flex-wrap mr-6 mb-10'>
             {projects.map((project) => {
-              return <PortfolioProject project={project} key={project.title} />
+              return <PortfolioProject project={project} key={project.title} />;
             })}
           </div>
           <h2 className='text-2xl mt-3 mb-10 font-header text-slate-500 tracking-wide'>
@@ -228,7 +228,7 @@ const IndexPage = () => {
         </footer>
       </main>
     </>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

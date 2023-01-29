@@ -9,7 +9,7 @@ const projects = [
     title: 'Nailspiration',
     description:
       'This is a simple tool for providing inspiration for creating new nail art. Although it was created specifically for one person, it can be used by anyone! The application uses the Unsplash and Smithsonian APIs, as well as web scraping to get fun images.',
-    link: 'http://ishmanail.fly.dev/',
+    link: 'https://www.ishmanail.xyz/',
     code: 'https://github.com/dangrous/nailspiration',
   },
   {

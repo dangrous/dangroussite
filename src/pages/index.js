@@ -79,7 +79,7 @@ const IndexPage = () => {
   return (
     <>
       <Helmet>
-        <title>DANGRO.US</title>
+        <title>DANGRO.US - Daniel Gale-Rosen</title>
         <meta
           name='description'
           content="Hi there, I'm Daniel Gale-Rosen. I'm a full-stack developer."

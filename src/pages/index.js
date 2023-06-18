@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
-import { Helmet } from 'react-helmet';
 import resume from '../files/DGRresume.pdf';
 
 const projects = [
@@ -77,156 +76,159 @@ const PortfolioProject = ({ project }) => {
 
 const IndexPage = () => {
   return (
-    <>
-      <Helmet>
-        <title>DANGRO.US - Daniel Gale-Rosen</title>
-        <meta
-          name='description'
-          content="Hi there, I'm Daniel Gale-Rosen. I'm a full-stack developer."
-        />
-      </Helmet>
-      <main className='flex bg-gradient-to-br from-slate-300 to-white flex-col max-h-screen overflow-hidden border border-slate-500 border-8'>
-        {/* <StaticImage
-        src='../images/header.jpeg'
-        alt='A man standing in front of Yosemite Valley'
-        height='400'
-      /> */}
-        <div
-          id='mainstuff'
-          className='overflow-y-auto flex container flex-col flex-grow max-w-full mx-3 mt-3 md:mt-0 font-body'
-        >
-          <div className='flex flex-wrap 2xl:flex-nowrap items-center mb-8 mr-4 2xl:mt-24'>
-            <StaticImage
-              src='../images/icon.jpg'
-              alt=''
-              className='md:mt-2 md:w-20 mr-2'
-            />
-            <p className='text-8xl uppercase font-header text-slate-500 pt-3'>
-              Hi there, I'm Daniel Gale-Rosen.
+    <main className='flex bg-gradient-to-br from-slate-300 to-white flex-col max-h-screen overflow-hidden border border-slate-500 border-8'>
+      {/* <StaticImage
+      src='../images/header.jpeg'
+      alt='A man standing in front of Yosemite Valley'
+      height='400'
+    /> */}
+      <div
+        id='mainstuff'
+        className='overflow-y-auto flex container flex-col flex-grow max-w-full mx-3 mt-3 md:mt-0 font-body'
+      >
+        <div className='flex flex-wrap 2xl:flex-nowrap items-center mb-8 mr-4 2xl:mt-24'>
+          <StaticImage
+            src='../images/icon.jpg'
+            alt=''
+            className='md:mt-2 md:w-20 mr-2'
+          />
+          <p className='text-8xl uppercase font-header text-slate-500 pt-3'>
+            Hi there, I'm Daniel Gale-Rosen.
+          </p>
+        </div>
+
+        <div className='flex flex-col pt-2 mr-8 my-10'>
+          <div className='flex mb-3'>
+            <p className='lg:basis-1/2'>
+              I'm a full-stack developer with deep (and now somewhat useless)
+              marketing experience. I've been coding on the side for years,
+              primarily in JavaScript and Python, and I'm ready to move into the
+              professional software development world.
             </p>
           </div>
-
-          <div className='flex flex-col pt-2 mr-8 my-10'>
-            <div className='flex mb-3'>
-              <p className='lg:basis-1/2'>
-                I'm a full-stack developer with deep (and now somewhat useless)
-                marketing experience. I've been coding on the side for years,
-                primarily in JavaScript and Python, and I'm ready to move into
-                the professional software development world.
-              </p>
-            </div>
-            <div className='flex mb-3'>
-              <p className='lg:basis-1/2'>
-                I've always had a passion for creating, whether that means
-                designing an escape room, learning how to code or engineer
-                something new, or perfecting the Old Fashioned. I have a passion
-                for games, immersive experiences, and finding other ways to
-                break people out of their usual routine.
-              </p>
-            </div>
-            <div className='flex mb-3'>
-              <p className='lg:basis-1/2'>
-                If you'd like to talk about something you're working on or what
-                we could make together,{' '}
-                <a
-                  className='text-slate-600 hover:underline hover:text-black'
-                  href='mailto:dangalerosen@gmail.com'
-                >
-                  let's chat
-                </a>
-                .
-              </p>
-            </div>
+          <div className='flex mb-3'>
+            <p className='lg:basis-1/2'>
+              I've always had a passion for creating, whether that means
+              designing an escape room, learning how to code or engineer
+              something new, or perfecting the Old Fashioned. I have a passion
+              for games, immersive experiences, and finding other ways to break
+              people out of their usual routine.
+            </p>
           </div>
-          <h2 className='text-2xl mt-3 font-header text-slate-500 mb-10 tracking-wide'>
-            Portfolio
-          </h2>
-          <div className='flex flex-wrap mr-6 mb-10'>
-            {projects.map((project) => {
-              return <PortfolioProject project={project} key={project.title} />;
-            })}
+          <div className='flex mb-3'>
+            <p className='lg:basis-1/2'>
+              If you'd like to talk about something you're working on or what we
+              could make together,{' '}
+              <a
+                className='text-slate-600 hover:underline hover:text-black'
+                href='mailto:dangalerosen@gmail.com'
+              >
+                let's chat
+              </a>
+              .
+            </p>
           </div>
-          <h2 className='text-2xl mt-3 mb-10 font-header text-slate-500 tracking-wide'>
-            Other Endeavors
+        </div>
+        <h2 className='text-2xl mt-3 font-header text-slate-500 mb-10 tracking-wide'>
+          Portfolio
+        </h2>
+        <div className='flex flex-wrap mr-6 mb-10'>
+          {projects.map((project) => {
+            return <PortfolioProject project={project} key={project.title} />;
+          })}
+        </div>
+        <h2 className='text-2xl mt-3 mb-10 font-header text-slate-500 tracking-wide'>
+          Other Endeavors
+        </h2>
+        <ul className='list-disc list-inside mb-6'>
+          <li>
+            <a
+              href='https://www.blackwoodcharter.org'
+              className='text-slate-600 hover:underline hover:text-black'
+            >
+              Escape Rooms
+            </a>
+          </li>
+          <li>
+            <a
+              href='https://52frames.com/photographer/13983'
+              className='text-slate-600 hover:underline hover:text-black'
+            >
+              Photography
+            </a>
+          </li>
+          <li>
+            <a
+              href='https://www.boozynewsie.com'
+              className='text-slate-600 hover:underline hover:text-black'
+            >
+              Cocktails
+            </a>
+          </li>
+        </ul>
+      </div>
+      <footer
+        className='flex p-5 bg-slate-500 text-white justify-between font-body sm:flex-nowrap
+      flex-wrap'
+      >
+        <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>
+          <h2 className='font-bold text-lg font-header tracking-wider'>
+            Contact and Links
           </h2>
-          <ul className='list-disc list-inside mb-6'>
-            <li>
-              <a
-                href='https://www.blackwoodcharter.org'
-                className='text-slate-600 hover:underline hover:text-black'
-              >
-                Escape Rooms
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://52frames.com/photographer/13983'
-                className='text-slate-600 hover:underline hover:text-black'
-              >
-                Photography
-              </a>
-            </li>
-            <li>
-              <a
-                href='https://www.boozynewsie.com'
-                className='text-slate-600 hover:underline hover:text-black'
-              >
-                Cocktails
-              </a>
-            </li>
+          <ul className='list-inside flex justify-between flex-grow-0'>
+            <a
+              className='hover:underline hover:text-black'
+              href={resume}
+              download
+            >
+              Resume
+            </a>
+            <span>/</span>
+            <a
+              href='mailto:dangalerosen@gmail.com'
+              className='hover:underline hover:text-black'
+            >
+              Email
+            </a>
+            <span>/</span>
+            <a
+              href='https://github.com/dangrous/'
+              className='hover:underline hover:text-black'
+            >
+              GitHub
+            </a>
+            <span>/</span>
+            <a
+              href='https://www.linkedin.com/in/dgalerosen/'
+              className='hover:underline hover:text-black'
+            >
+              LinkedIn
+            </a>
+            <span>/</span>
+            <a
+              href='https://www.instagram.com/dangrous/'
+              className='hover:underline hover:text-black'
+            >
+              Instagram
+            </a>
           </ul>
         </div>
-        <footer
-          className='flex p-5 bg-slate-500 text-white justify-between font-body sm:flex-nowrap
-        flex-wrap'
-        >
-          <div className='flex flex-col flex-grow-0 basis-1/4 mr-5'>
-            <h2 className='font-bold text-lg font-header tracking-wider'>
-              Contact and Links
-            </h2>
-            <ul className='list-inside flex justify-between flex-grow-0'>
-              <a
-                className='hover:underline hover:text-black'
-                href={resume}
-                download
-              >
-                Resume
-              </a>
-              <span>/</span>
-              <a
-                href='mailto:dangalerosen@gmail.com'
-                className='hover:underline hover:text-black'
-              >
-                Email
-              </a>
-              <span>/</span>
-              <a
-                href='https://github.com/dangrous/'
-                className='hover:underline hover:text-black'
-              >
-                GitHub
-              </a>
-              <span>/</span>
-              <a
-                href='https://www.linkedin.com/in/dgalerosen/'
-                className='hover:underline hover:text-black'
-              >
-                LinkedIn
-              </a>
-              <span>/</span>
-              <a
-                href='https://www.instagram.com/dangrous/'
-                className='hover:underline hover:text-black'
-              >
-                Instagram
-              </a>
-            </ul>
-          </div>
-          <p className='self-end mt-5 sm:mt-0'>
-            This website is created with Gatsby.js and styled with Tailwind.css
-          </p>
-        </footer>
-      </main>
+        <p className='self-end mt-5 sm:mt-0'>
+          This website is created with Gatsby.js and styled with Tailwind.css
+        </p>
+      </footer>
+    </main>
+  );
+};
+
+export const Head = () => {
+  return (
+    <>
+      <title>DANGRO.US - Daniel Gale-Rosen</title>
+      <meta
+        name='description'
+        content="Hi there, I'm Daniel Gale-Rosen. I'm a full-stack developer."
+      />
     </>
   );
 };

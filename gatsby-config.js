@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `DANGRO.US`,
+    title: `DANGRO.US - Daniel Gale-Rosen`,
     siteUrl: `https://dangro.us`,
   },
   plugins: [
@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'DANGRO.US',
+        name: 'DANGRO.US - Daniel Gale-Rosen',
         short_name: 'DANGRO.US',
         start_url: '/',
         background_color: '#6b37bf',
@@ -58,4 +58,4 @@ module.exports = {
       },
     },
   ],
-}
+};

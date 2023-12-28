@@ -100,10 +100,11 @@ const IndexPage = () => {
         <div className='flex flex-col pt-2 mr-8 my-10'>
           <div className='flex mb-3'>
             <p className='lg:basis-1/2'>
-              I'm a full-stack developer with deep (and now somewhat useless)
-              marketing experience. I've been coding on the side for years,
-              primarily in JavaScript and Python, and I'm ready to move into the
-              professional software development world.
+              I'm a seasoned full-stack developer with deep marketing
+              experience. I've been coding for years, primarily in
+              React/JavaScript and Python. This initially began as a tool for
+              data analysis, but I'm now at home in the professional software
+              development world.
             </p>
           </div>
           <div className='flex mb-3'>

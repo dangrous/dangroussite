@@ -180,6 +180,7 @@ const IndexPage = () => {
             <a
               className='hover:underline hover:text-black'
               href={resume}
+              rel='nofollow'
               download
             >
               Resume
